@@ -1,0 +1,1040 @@
+# BUILD FOLKFORM: A FULL-STACK AI-POWERED GLOBAL ARTISAN COMMERCE & PROCUREMENT PLATFORM
+
+Act as a world-class product designer, senior full-stack engineer, AI systems architect, and startup CTO.
+
+Your task is to design and build a production-quality, fully functional web application called **Folkform**.
+
+Do not build a basic marketplace, static landing page, or UI-only prototype.
+
+Build a complete B2B commerce and procurement platform with intelligent AI agents that connect Indian artisans, weavers, craft clusters and small manufacturers with international buyers, retailers, hospitality businesses, interior designers and procurement teams.
+
+The product must demonstrate a compelling business model, genuine operational utility, scalability, and meaningful social and economic impact.
+
+The application should look and behave like a venture-backed global technology startup.
+
+---
+
+# 1. PRODUCT VISION
+
+Brand: Folkform
+
+Tagline: Where Culture Meets Commerce.
+
+Positioning:
+
+Folkform is an AI-powered global sourcing and procurement infrastructure for India's artisan economy.
+
+It enables businesses to discover authentic Indian craftsmanship, identify verified suppliers, request bulk quotations, compare prices, negotiate commercial terms, coordinate production and manage procurement through intelligent AI agents.
+
+At the same time, artisans receive a digital business presence, access to qualified buyers, bulk-order opportunities and tools to manage their commercial operations.
+
+The fundamental value proposition:
+
+For buyers:
+- Discover unique Indian products and verified makers.
+- Find suppliers based on product specifications and requirements.
+- Compare quotations and supplier capabilities.
+- Place bulk orders.
+- Coordinate production and delivery.
+- Reduce sourcing time and procurement complexity.
+
+For artisans:
+- Create a digital storefront.
+- Showcase their craftsmanship and heritage.
+- Receive qualified B2B enquiries.
+- Get bulk procurement requests.
+- Manage quotations and orders.
+- Access new domestic and international markets.
+
+Folkform must not be positioned as just another handicraft listing website.
+
+It is a procurement operating system connecting traditional production with modern global commerce.
+
+# 2. DESIGN DIRECTION AND BRAND IDENTITY
+
+Create a visually exceptional, premium editorial experience.
+
+Use the visual identity of luxury Indian craftsmanship.
+
+Reference aesthetic:
+- Premium Indian artisan boutiques.
+- Editorial product photography.
+- Contemporary luxury home décor brands.
+- Modern international B2B commerce platforms.
+
+Colour palette:
+- Warm ivory: #F8F3E8
+- Sandstone: #E9DCC7
+- Deep espresso: #3A2319
+- Terracotta: #B05330
+- Antique brass: #BE9753
+- Muted sage: #6F8069
+- Warm white: #FFFCF6
+
+Typography:
+- Elegant serif typography for large headlines.
+- Clean modern sans-serif for UI and body text.
+- Clear hierarchy and generous whitespace.
+
+Visual requirements:
+- Large high-quality images of Indian handicrafts.
+- Handwoven textiles, pottery, brassware, wooden carvings, jewellery, ceramics and traditional artwork.
+- Editorial photography of artisans working in workshops.
+- Premium product cards with large imagery.
+- Beautiful dashboard visualisations.
+- Subtle hover animations.
+- Smooth transitions.
+- Refined micro-interactions.
+- Consistent spacing and alignment.
+
+Avoid:
+- Generic AI-generated dashboard templates.
+- Excessive gradients.
+- Purple and blue AI startup aesthetics.
+- Overcrowded layouts.
+- Too many cards on every page.
+- Generic illustrations.
+- Emoji-based UI icons.
+- Excessive text.
+- Placeholder-looking sections.
+
+The website must feel like a polished international commerce company.
+
+Use authentic-looking Indian craft imagery. Use licensed or generated assets, and never represent generated people as actual verified artisans.
+
+# 3. TECHNOLOGY STACK
+
+Use the following preferred stack:
+
+Frontend:
+- Next.js with App Router.
+- TypeScript.
+- Tailwind CSS.
+- shadcn/ui.
+- Lucide icons.
+- Framer Motion for animations.
+- Recharts for analytics.
+
+Backend:
+- Next.js server-side APIs or a dedicated backend service.
+- PostgreSQL.
+- Supabase for database, authentication and file storage.
+- Supabase Row Level Security for role-based data access.
+
+AI:
+- Anthropic or OpenAI API through a provider abstraction.
+- LangGraph for multi-agent workflow orchestration.
+- Structured outputs using Zod.
+- Tool calling for database operations and procurement workflows.
+- Persistent workflow state.
+
+Additional integrations:
+- Resend for email notifications.
+- Cloudinary or Supabase Storage for images.
+- Razorpay or Stripe for payment integration, subject to supported merchant eligibility.
+- Map provider for supplier locations.
+- PDF generation for quotations, invoices and purchase orders.
+
+Use environment variables for all API keys and secrets.
+
+Never expose secrets to the browser.
+
+If an integration is unavailable, implement a clearly labelled mock adapter. Do not pretend that a simulated payment, shipment, export document or supplier verification is a real external transaction.
+
+# 4. USER ROLES AND AUTHENTICATION
+
+Build three primary user roles.
+
+A. BUYER
+
+Buyer types:
+- Retail businesses.
+- International wholesalers.
+- Hospitality businesses.
+- Interior designers.
+- Corporate gifting companies.
+- Exporters and distributors.
+
+Buyer capabilities:
+- Browse products.
+- Discover suppliers.
+- Save products and suppliers.
+- Submit RFQs.
+- Receive quotations.
+- Compare supplier offers.
+- Negotiate pricing.
+- Create purchase orders.
+- Track orders.
+- Manage payments.
+- Access AI sourcing assistant.
+
+B. ARTISAN / SUPPLIER
+
+Supplier types:
+- Individual artisans.
+- Weavers.
+- Craft cooperatives.
+- Self-help groups.
+- Small manufacturers.
+- Artisan collectives.
+
+Supplier capabilities:
+- Create a business profile.
+- Add products.
+- Upload product images.
+- Specify materials and craft techniques.
+- Set MOQ and pricing.
+- Specify production capacity.
+- Set estimated lead times.
+- Receive RFQs.
+- Submit quotations.
+- Accept or reject orders.
+- Update production progress.
+- Manage their catalogue.
+- View revenue and order analytics.
+
+C. ADMIN
+
+Admin capabilities:
+- Manage users.
+- Review supplier applications.
+- Approve or reject supplier verification.
+- Manage product listings.
+- Review RFQs.
+- Monitor transactions.
+- Resolve disputes.
+- Manage platform categories.
+- Monitor AI agent activity.
+- View platform revenue.
+- View business analytics.
+
+Implement authentication, protected routes, role-specific dashboards and database-backed permissions.
+
+# 5. PUBLIC WEBSITE
+
+Build a polished public-facing website.
+
+## Homepage
+
+The homepage should immediately communicate Folkform's value proposition.
+
+Hero section:
+
+Headline:
+"India's Craft. The World's Marketplace."
+
+Supporting text:
+"Discover extraordinary craftsmanship. Source directly from India's makers. Procure with intelligence."
+
+Primary CTA:
+"Explore Collections"
+
+Secondary CTA:
+"Source for Your Business"
+
+Hero imagery:
+A premium editorial composition featuring Indian handcrafted ceramics, textiles, brassware and artisan products.
+
+Sections:
+
+1. Hero section.
+2. Featured craft collections.
+3. How Folkform works.
+4. Explore artisan communities.
+5. Featured makers.
+6. Why businesses source through Folkform.
+7. AI-powered procurement introduction.
+8. Impact and craftsmanship storytelling.
+9. Buyer testimonials using clearly labelled demo content until real testimonials exist.
+10. CTA for buyers and artisans.
+11. Footer.
+
+## Explore Marketplace
+
+Create a complete product discovery experience.
+
+Categories:
+- Textiles and Weaving.
+- Pottery and Ceramics.
+- Brass and Metalwork.
+- Woodcraft.
+- Jewellery.
+- Home Décor.
+- Paintings and Folk Art.
+- Sustainable Handmade Products.
+- Corporate Gifting.
+
+Features:
+- Search products.
+- Filter by category.
+- Filter by state and region.
+- Filter by material.
+- Filter by craft technique.
+- Filter by price.
+- Filter by MOQ.
+- Filter by supplier verification.
+- Sort by relevance.
+- Sort by price.
+- Sort by popularity.
+- Save products.
+- Compare products.
+- View supplier profiles.
+
+Product cards should show:
+- Product image.
+- Product name.
+- Craft category.
+- Origin.
+- Supplier name.
+- MOQ.
+- Indicative price.
+- Verification status.
+
+## Product Detail Page
+
+Include:
+- Product gallery.
+- Product specifications.
+- Materials.
+- Craft techniques.
+- Origin.
+- Artisan information.
+- Customisation options.
+- Minimum order quantity.
+- Production lead time.
+- Indicative wholesale pricing.
+- Available quantity.
+- Request quotation CTA.
+- Similar products.
+- Supplier details.
+
+Do not display fabricated certifications or verified status.
+
+# 6. ARTISAN AND SUPPLIER EXPERIENCE
+
+Create a dedicated supplier onboarding flow.
+
+Onboarding steps:
+
+1. Business information.
+2. Artisan or organisation details.
+3. Location and craft cluster.
+4. Craft categories.
+5. Product catalogue.
+6. Production capacity.
+7. MOQ.
+8. Pricing.
+9. Lead times.
+10. Supporting documents and optional verification evidence.
+
+Supplier dashboard:
+
+- Overview.
+- My products.
+- RFQ inbox.
+- Quotations.
+- Orders.
+- Production management.
+- Payments.
+- Analytics.
+- Business profile.
+- Settings.
+
+Supplier overview should show:
+- Total products.
+- Active RFQs.
+- Pending quotations.
+- Active orders.
+- Revenue.
+- Order performance.
+- Recent buyer activity.
+
+Supplier RFQ inbox:
+
+Display buyer requirements with:
+- Product requested.
+- Quantity.
+- Budget.
+- Customisation.
+- Delivery deadline.
+- Destination.
+- Buyer information.
+
+Allow the supplier to submit a quotation with:
+- Unit price.
+- MOQ.
+- Available capacity.
+- Estimated production time.
+- Shipping estimate.
+- Additional conditions.
+- Quotation validity.
+
+# 7. BUYER EXPERIENCE
+
+Create a premium business procurement dashboard.
+
+Buyer dashboard sections:
+
+- Overview.
+- Discover products.
+- Discover suppliers.
+- AI sourcing.
+- My RFQs.
+- Quotations.
+- Compare suppliers.
+- Purchase orders.
+- Active orders.
+- Saved collections.
+- Messages.
+- Analytics.
+- Settings.
+
+Buyer dashboard should show:
+- Active sourcing requests.
+- Received quotations.
+- Pending approvals.
+- Active orders.
+- Total procurement value.
+- Recently viewed products.
+- Recommended suppliers.
+
+## RFQ CREATION
+
+Build a complete Request for Quotation workflow.
+
+Buyer can specify:
+- Product or craft category.
+- Product description.
+- Reference image.
+- Quantity.
+- Target unit price.
+- Preferred materials.
+- Craft technique.
+- Customisation requirements.
+- MOQ preferences.
+- Delivery location.
+- Required delivery date.
+- Shipping requirements.
+- Additional instructions.
+
+The system should convert this information into a structured RFQ.
+
+The RFQ must be stored in the database and made available to suitable suppliers.
+
+Allow buyers to track:
+- RFQ status.
+- Suppliers contacted.
+- Quotations received.
+- Quotations pending.
+- Selected supplier.
+
+# 8. CORE FEATURE: FOLKFORM AI SOURCING ASSISTANT
+
+This is one of the most important differentiators.
+
+Create an intelligent AI assistant called:
+
+"Folkform Sourcing Intelligence"
+
+It should not behave like a generic chatbot.
+
+It must help buyers complete actual sourcing tasks.
+
+Example buyer request:
+
+"I need 500 handcrafted ceramic table lamps from Rajasthan for a boutique hotel. My budget is ₹1,000 to ₹1,500 per unit. Delivery required within 30 days."
+
+The assistant should:
+
+1. Understand the buyer's requirements.
+2. Extract structured product specifications.
+3. Identify the appropriate craft category.
+4. Search the supplier database.
+5. Match suppliers based on capability.
+6. Compare MOQ.
+7. Compare pricing.
+8. Evaluate estimated production timelines.
+9. Identify missing information.
+10. Generate a supplier shortlist.
+11. Explain why each supplier matches.
+12. Generate a structured RFQ.
+13. Ask for buyer confirmation before submitting.
+
+Display results in a polished sourcing workspace.
+
+The assistant should provide:
+- Supplier recommendations.
+- Match explanations.
+- Product recommendations.
+- Price comparison.
+- Delivery estimates.
+- Potential sourcing risks.
+- Suggested next actions.
+
+Use actual database records for recommendations.
+
+Never invent suppliers, stock, prices or availability.
+
+If there are insufficient matching suppliers, communicate this honestly.
+
+# 9. MULTI-AGENT AI ARCHITECTURE
+
+Implement a genuine multi-agent system using LangGraph or an equivalent stateful orchestration framework.
+
+Build the following specialised agents.
+
+## Agent 1: Buyer Requirement Agent
+
+Responsibilities:
+- Understand natural-language requests.
+- Extract product specifications.
+- Identify quantities.
+- Identify budget.
+- Identify destination.
+- Identify deadlines.
+- Ask clarification questions.
+- Produce structured RFQs.
+
+## Agent 2: Supplier Discovery Agent
+
+Responsibilities:
+- Search the supplier database.
+- Retrieve supplier capabilities.
+- Filter by product category.
+- Filter by craft.
+- Filter by location.
+- Filter by MOQ.
+- Filter by production capacity.
+- Generate a shortlist.
+
+## Agent 3: Product Matching Agent
+
+Responsibilities:
+- Compare product requirements against supplier catalogues.
+- Match materials.
+- Match dimensions.
+- Match design requirements.
+- Evaluate customisation capabilities.
+- Produce explainable match scores.
+
+## Agent 4: Capacity Verification Agent
+
+Responsibilities:
+- Retrieve declared supplier capacity.
+- Check MOQ.
+- Check estimated production time.
+- Identify potential capacity conflicts.
+- Request supplier confirmation when necessary.
+
+Important: declared capacity is not the same as independently verified capacity.
+
+## Agent 5: Pricing Intelligence Agent
+
+Responsibilities:
+- Compare supplier quotations.
+- Calculate total procurement estimates.
+- Compare unit prices.
+- Consider shipping estimates.
+- Highlight differences.
+- Explain cost trade-offs.
+
+Never generate fake market prices or claim a price is competitive without evidence.
+
+## Agent 6: Procurement Agent
+
+Responsibilities:
+- Generate RFQs.
+- Collect supplier quotations.
+- Prepare comparison reports.
+- Draft purchase orders.
+- Track approvals.
+- Maintain transaction state.
+
+Never accept a quotation, sign a contract or commit money without explicit human approval.
+
+## Agent 7: Fulfilment Agent
+
+Responsibilities:
+- Track order milestones.
+- Identify delayed production.
+- Send notifications.
+- Maintain fulfilment timelines.
+- Escalate exceptions.
+
+## Agent 8: Provenance Assistant
+
+Responsibilities:
+- Organise artisan information.
+- Preserve product origin.
+- Record materials and techniques.
+- Maintain craft documentation.
+- Generate product descriptions from supplier-approved information.
+
+Never invent heritage, provenance, GI status or certifications.
+
+## ORCHESTRATOR
+
+Build a central orchestration layer.
+
+The orchestrator must:
+- Receive the buyer request.
+- Route tasks to specialised agents.
+- Maintain shared workflow state.
+- Execute tools.
+- Handle errors.
+- Retry recoverable operations.
+- Store execution history.
+- Request human approval when necessary.
+- Return structured results.
+
+Use typed inputs and outputs.
+
+Persist workflow state in the database.
+
+Include agent execution logs and workflow status in the admin dashboard.
+
+# 10. SUPPLIER MATCHING ENGINE
+
+Implement a transparent supplier matching algorithm.
+
+Example matching dimensions:
+
+- Product/category relevance.
+- Craft technique.
+- Materials.
+- Geographic preference.
+- MOQ compatibility.
+- Capacity compatibility.
+- Lead-time compatibility.
+- Customisation ability.
+
+Use configurable weighted scoring.
+
+Return:
+- Overall match score.
+- Individual matching dimensions.
+- Missing requirements.
+- Potential concerns.
+- Reason for recommendation.
+
+Distinguish AI recommendations from confirmed supplier commitments.
+
+# 11. QUOTATION COMPARISON WORKSPACE
+
+This should be a standout feature.
+
+Create a visual quotation comparison page.
+
+Example:
+
+Buyer requests 500 handmade lamps.
+
+Supplier A:
+- Unit price: ₹1,100.
+- MOQ: 100.
+- Lead time: 25 days.
+
+Supplier B:
+- Unit price: ₹1,250.
+- MOQ: 200.
+- Lead time: 18 days.
+
+Supplier C:
+- Unit price: ₹980.
+- MOQ: 500.
+- Lead time: 35 days.
+
+These are seeded demo values, not real market quotations.
+
+Comparison dimensions:
+- Unit price.
+- Total product cost.
+- MOQ.
+- Production capacity.
+- Lead time.
+- Shipping estimate.
+- Customisation.
+- Supplier location.
+- Verification evidence.
+
+Allow buyers to:
+- Compare side by side.
+- Request clarification.
+- Ask for revised quotations.
+- Save quotations.
+- Select a preferred supplier.
+- Generate a purchase order draft.
+
+# 12. ORDER AND PROCUREMENT MANAGEMENT
+
+Create a complete order lifecycle.
+
+Order statuses:
+
+- RFQ submitted.
+- Supplier contacted.
+- Quotation received.
+- Negotiation.
+- Awaiting buyer approval.
+- Purchase order created.
+- Supplier confirmed.
+- Production started.
+- Quality check.
+- Ready for dispatch.
+- Shipped.
+- Delivered.
+- Completed.
+- Disputed or cancelled.
+
+Build:
+- Order detail pages.
+- Timeline visualisation.
+- Production updates.
+- Buyer and supplier communication.
+- Supporting documents.
+- Delivery information.
+- Order history.
+
+Generate professional PDF quotation and purchase-order documents.
+
+Use human approval before important commercial actions.
+
+# 13. BUSINESS MODEL AND REVENUE
+
+Design Folkform to support multiple revenue streams.
+
+Primary revenue:
+
+1. Transaction commission on successfully completed orders.
+2. Managed sourcing fees for complex procurement.
+3. Subscription plans for professional buyers.
+4. Software tools for larger artisan collectives.
+
+Create an admin revenue dashboard showing:
+
+- Total GMV.
+- Platform revenue.
+- Commission earned.
+- Number of transactions.
+- Average order value.
+- Active buyers.
+- Active suppliers.
+- Repeat buyer rate.
+- RFQ conversion rate.
+- Average time to quotation.
+
+Add configurable commission rates.
+
+Example pricing configuration:
+- Standard transaction commission: 8%.
+- Managed sourcing: custom service fee.
+- Buyer subscription: configurable monthly plans.
+
+Treat these as initial business assumptions, not validated market pricing.
+
+Only count completed, recorded transactions as realised revenue.
+
+Clearly separate GMV from platform revenue.
+
+# 14. ADMIN CONTROL CENTER
+
+Create a comprehensive admin dashboard.
+
+Modules:
+
+- Platform overview.
+- User management.
+- Supplier verification.
+- Product moderation.
+- Category management.
+- RFQ management.
+- Order management.
+- Disputes.
+- AI workflow monitoring.
+- Revenue analytics.
+- Platform settings.
+
+Include charts, data tables, filters and search.
+
+The admin should be able to inspect every AI-generated recommendation and its supporting data.
+
+# 15. MESSAGING AND NOTIFICATIONS
+
+Build buyer-supplier communication.
+
+Features:
+- Conversation threads.
+- RFQ-specific conversations.
+- Quotation clarification.
+- Order-specific updates.
+- File attachments.
+- Read status.
+- Notification center.
+
+Notifications:
+- New RFQ.
+- New quotation.
+- Quotation accepted.
+- Order status changed.
+- Production delayed.
+- Buyer message.
+- Supplier message.
+- Approval required.
+
+Use in-app notifications and email integration where configured.
+
+# 16. DATABASE ARCHITECTURE
+
+Design a proper relational PostgreSQL schema.
+
+At minimum, include:
+
+- users
+- profiles
+- buyer_profiles
+- supplier_profiles
+- supplier_verification
+- artisan_clusters
+- product_categories
+- products
+- product_images
+- product_specifications
+- supplier_capabilities
+- rfqs
+- rfq_requirements
+- rfq_supplier_matches
+- quotations
+- quotation_items
+- conversations
+- messages
+- purchase_orders
+- order_items
+- order_milestones
+- payments
+- notifications
+- saved_products
+- saved_suppliers
+- agent_workflows
+- agent_execution_logs
+- platform_commissions
+- audit_logs
+
+Requirements:
+- UUID primary keys.
+- Proper foreign keys.
+- Database indexes.
+- Created and updated timestamps.
+- Appropriate enums or constrained status fields.
+- Row-level security.
+- Role-based permissions.
+- Data validation.
+- Audit trails for commercial actions.
+
+# 17. SEED DATA AND DEMO EXPERIENCE
+
+Populate the platform with realistic Indian artisan marketplace data.
+
+Create at least:
+- 25 demo products.
+- 12 demo suppliers.
+- 8 craft categories.
+- 5 buyer accounts.
+- 10 RFQs.
+- 15 quotations.
+- 8 sample orders.
+
+Represent multiple Indian craft regions:
+
+- Jaipur, Rajasthan.
+- Moradabad, Uttar Pradesh.
+- Kutch, Gujarat.
+- Bhuj, Gujarat.
+- Varanasi, Uttar Pradesh.
+- Channapatna, Karnataka.
+- Kashmir.
+- Odisha.
+- Tamil Nadu.
+
+Example products:
+- Blue pottery.
+- Brass decorative objects.
+- Handwoven cotton textiles.
+- Banarasi silk products.
+- Wooden toys.
+- Block-printed fabrics.
+- Handcrafted lamps.
+- Ceramic tableware.
+- Traditional wall art.
+- Woven baskets.
+
+Clearly mark all generated businesses, suppliers, prices, reviews, certifications and transactions as demonstration data.
+
+Do not imply that demo suppliers are actual verified businesses.
+
+Create demo login accounts for each role.
+
+# 18. RESPONSIVE DESIGN
+
+The entire application must work on:
+
+- Desktop.
+- Laptop.
+- Tablet.
+- Mobile.
+
+Prioritise desktop for complex procurement dashboards, while ensuring that suppliers can conveniently manage enquiries and orders from mobile.
+
+Implement:
+- Responsive navigation.
+- Mobile menus.
+- Responsive tables.
+- Touch-friendly interactions.
+- Accessible forms.
+- Loading states.
+- Empty states.
+- Error states.
+- Success states.
+
+# 19. SECURITY AND RELIABILITY
+
+Implement:
+
+- Secure authentication.
+- Protected routes.
+- Server-side authorisation.
+- Row-level security.
+- Input validation.
+- API rate limiting.
+- Secure file uploads.
+- File type and size validation.
+- Environment variable management.
+- Audit logging.
+- Payment verification through trusted providers.
+- Safe AI tool execution.
+
+AI agents must not directly execute unauthorised financial or contractual operations.
+
+# 20. PRODUCT QUALITY AND EXECUTION REQUIREMENTS
+
+Do not build everything as disconnected UI screens.
+
+Every important button must perform a real action.
+
+Examples:
+- Add Product must persist the product.
+- Submit RFQ must create an RFQ.
+- Search must return actual matching database records.
+- Generate Quotations must create or retrieve quotation records.
+- Compare Suppliers must calculate a comparison from actual quotation data.
+- Accept Quotation must update the workflow after confirmation.
+- Create Purchase Order must generate a persistent order record.
+- Update Production Status must update the order timeline.
+- AI Sourcing must invoke the actual AI workflow.
+- Notifications must be connected to real events.
+
+Use mock integrations only where external credentials are unavailable. Clearly distinguish simulated workflows from live integrations.
+
+# 21. IMPLEMENTATION STRATEGY
+
+Build the project in phases.
+
+Phase 1: Foundation
+- Repository setup.
+- Design system.
+- Database.
+- Authentication.
+- Role management.
+- Public website.
+
+Phase 2: Marketplace
+- Product catalogue.
+- Supplier profiles.
+- Search and filtering.
+- Product details.
+- Supplier onboarding.
+
+Phase 3: Procurement
+- RFQ creation.
+- Supplier matching.
+- Quotations.
+- Comparison workspace.
+- Purchase orders.
+- Order tracking.
+
+Phase 4: AI
+- Requirement extraction.
+- Supplier discovery.
+- Product matching.
+- Pricing intelligence.
+- Procurement orchestration.
+- Human approval.
+- Agent logs.
+
+Phase 5: Business operations
+- Revenue analytics.
+- Admin dashboard.
+- Notifications.
+- Messaging.
+- PDF generation.
+
+Phase 6: Quality
+- Responsive design.
+- Automated tests.
+- Security checks.
+- Error handling.
+- Performance optimisation.
+- Deployment configuration.
+
+# 22. FINAL ACCEPTANCE CRITERIA
+
+The completed application must demonstrate the following end-to-end journey:
+
+1. A buyer registers and logs in.
+2. The buyer opens Folkform AI Sourcing.
+3. The buyer describes a bulk procurement requirement in natural language.
+4. The AI extracts the requirement.
+5. The AI searches the actual seeded supplier database.
+6. The system produces an explainable supplier shortlist.
+7. The buyer submits an RFQ.
+8. Suppliers receive the RFQ in their dashboards.
+9. Suppliers submit quotations.
+10. The buyer compares quotations.
+11. The buyer selects a supplier.
+12. The platform generates a purchase-order draft.
+13. The buyer approves the purchase order.
+14. The supplier confirms the order.
+15. Production milestones are updated.
+16. The buyer tracks the order.
+17. The admin sees the transaction and associated platform revenue after completion.
+
+The entire flow must be demonstrable.
+
+# 23. HOW TO WORK
+
+Before coding:
+
+1. Inspect the existing repository.
+2. Understand its current structure.
+3. Identify reusable components.
+4. Create a clear implementation plan.
+5. Define the database schema.
+6. Establish the design system.
+7. Build the application incrementally.
+
+Do not replace a working project without understanding it.
+
+Do not leave critical functionality as TODOs.
+
+Do not create fake buttons or dead-end navigation.
+
+Do not use hardcoded dashboard metrics where database-backed data is expected.
+
+Do not claim external integrations are working when they are only simulated.
+
+Prioritise a coherent, working end-to-end product over an excessive number of incomplete features.
+
+Run the application, test critical flows, fix errors and verify that all core user journeys work.
+
+The final result should be a premium, commercially credible, fully functional B2B sourcing platform.
+
+**The goal is to make Folkform look and operate like a real startup that could onboard its first artisan partners and B2B buyers, not merely a hackathon prototype.**

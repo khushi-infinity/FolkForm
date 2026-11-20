@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-ivory: #F8F3E8;
+  --color-sandstone: #E9DCC7;
+  --color-espresso: #3A2319;
+  --color-terracotta: #B05330;
+  --color-brass: #BE9753;
+  --color-sage: #6F8069;
+  --color-warmwhite: #FFFCF6;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #F8F3E8;
+    color: #3A2319;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: var(--font-serif);
+    text-wrap: balance;
+  }
+
+  button, a, input, select, textarea {
+    outline-color: #B05330;
+  }
+
+  :focus-visible {
+    outline: 2px solid #B05330;
+    outline-offset: 2px;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom subtle scrollbars matching warm sandstone */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F3E8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D6C3A8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B8A081;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

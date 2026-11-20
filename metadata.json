@@ -1,0 +1,6 @@
+{
+  "name": "Folkform",
+  "description": "AI-powered global artisan commerce and B2B procurement platform connecting Indian craft clusters with international buyers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
